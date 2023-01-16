@@ -1,0 +1,196 @@
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  max-width: 1100px;
+}
+section {
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  /* color: aliceblue; */
+}
+ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+/* ----- HOMEPAGE ----- */
+.page-headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+}
+.page-headings h1 {
+  padding-top: 15px;
+}
+.author-name {
+  padding: 5px;
+  text-align: end;
+}
+
+/* ----- NAVBAR ----- */
+nav {
+  padding: 10px 5px 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+nav p {
+  font-size: larger;
+  white-space: nowrap;
+}
+/* ----- TABLE ----- */
+table {
+  width: 100%;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 5px;
+  min-width: 50px;
+}
+th {
+  border: 1px solid #dddddd;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.article-title {
+  min-width: 120px;
+}
+
+/* ----- ARTICLES ----- */
+.headings-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 80px 0 80px;
+}
+.article-content {
+  padding: 20px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.article-content h4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.article-content p {
+  padding: 0 80px 0 80px;
+  text-align: justify;
+}
+
+/* ----- FORMS ----- */
+form {
+  padding-bottom: 20px;
+}
+form label {
+  font-size: 1.25rem;
+}
+form .input-box {
+  min-width: 100%;
+  margin-bottom: 20px;
+}
+form .edit-article {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-buttons input {
+  min-width: 100px;
+}
+
+/* ----- COMMENTS ----- */
+.comment-textarea {
+  width: 300px;
+  max-width: 920px;
+  resize: both;
+  margin-bottom: 5px;
+}
+.comment-box {
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.comment-box:nth-child(even) {
+  background-color: #dddddd;
+}
+.comment-box .comment-date {
+  font-size: 0.75rem;
+  text-align: left;
+}
+.no-comments {
+  padding: 20px;
+}
+
+/* ----- OTHER COMPONENTS ----- */
+/* divider line */
+.line-thin {
+  width: auto;
+  height: 0px;
+  border-bottom: 1px solid lightgrey;
+  margin: 0 0 3rem 0;
+}
+.line-thin-2 {
+  width: auto;
+  height: 0px;
+  border-bottom: 3px solid lightgrey;
+  margin: 0;
+}
+.line-thick {
+  width: auto;
+  height: 0px;
+  border-bottom: 3px solid lightgrey;
+  margin: 3rem 0;
+}
+/* italics smaller text */
+.text-style {
+  font-style: italic;
+  font-size: 0.85rem;
+}
+.text-style-2 {
+  font-size: 0.85rem;
+}
+.inline-padding {
+  padding: 20px;
+}
+
+/* -----ICONS----- */
+.material-symbols-outlined {
+  /* color: #dddddd; */
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 32px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav>
+      <a href="/main">
+        <span class="material-symbols-outlined"> home </span>
+        <p>Home</p>
+      </a>
+      <a href="/user">
+        <span class="material-symbols-outlined"> login </span>
+        <p>Sign In</p>
+      </a>
+    </nav>
+    <div class="line-thin-2"></div>
+
+    <!-- homepage title -->
+    <div class="page-headings">
+      <h1>Welcome to Blogger</h1>
+      <p>
+        Join the fast growing open platform readers and thinkers can share their
+        ideas.
+      </p>
+    </div>
+
+    <!-- published articles list -->
+    <% author_names.forEach((author, index) => {%>
+    <h3><%= blog_titles[index] %></h3>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Creation Date</th>
+        <th>Last Edit</th>
+        <th>Likes</th>
+        <th>ID</th>
+        <th>Options</th>
+      </tr>
+      <% articles.forEach(article => { %> <% if (author ==
+      author_names[article.author_id-1]) { %>
+      <tr>
+        <td>
+          <a href="/main/<%= article.article_id%>"
+            ><%= article.article_title %></a
+          >
+        </td>
+        <td><%= author_names[article.author_id-1] %></td>
+        <td><%= article.creation_date %></td>
+        <td><%= article.edit_date %></td>
+        <td><%= article.likes %></td>
+        <td><%= article.article_id %></td>
+        <td>
+          <p>
+            <a
+              class="btn btn-primary"
+              onclick="prompt('Here is your sharing link:', 'http\:\/\/localhost:3000/main/<%= article.article_id %>')">
+              Share
+            </a>
+          </p>
+        </td>
+      </tr>
+      <% } %> <% }) %>
+    </table>
+    <div class="line-thin"></div>
+    <% }) %>
+  </body>
+</html>
