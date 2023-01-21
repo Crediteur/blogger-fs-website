@@ -56,7 +56,7 @@
           type="text"
           class="input-box form-control"
           name="article_title"
-          value="<%=draft.article_title %>" />
+          value="<%=draft.article_title.trim() %>" />
         <div>
           <label class="form-label" for="article-subtitle">Subtitle</label>
         </div>
@@ -64,14 +64,12 @@
           type="text"
           class="input-box form-control"
           name="article_subtitle"
-          value="<%=draft.article_subtitle %>" />
+          value="<%=draft.article_subtitle.trim() %>" />
         <div><label class="form-label" for="article-text">Body</label></div>
         <textarea
           class="edit-article form-control"
           type="text"
-          name="article_text">
-<%= draft.article_text %>
-        </textarea>
+          name="article_text"><%= draft.article_text.trim() %></textarea>
       </div>
       <div class="form-buttons">
         <input
